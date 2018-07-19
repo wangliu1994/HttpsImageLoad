@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/HttpsImageLoad.iml" filepath="$PROJECT_DIR$/HttpsImageLoad.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/glide370library/glide370library.iml" filepath="$PROJECT_DIR$/glide370library/glide370library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/glide471library/glide471library.iml" filepath="$PROJECT_DIR$/glide471library/glide471library.iml" />
     </modules>
   </component>
 </project>

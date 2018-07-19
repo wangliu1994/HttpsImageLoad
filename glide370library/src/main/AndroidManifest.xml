@@ -1,2 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.winnie.widget.glide370library" />
+    package="com.winnie.widget.glide370library">
+
+    <application>
+        <!--配置glide加载https所需要的GlideModule-->
+        <meta-data
+            android:name="com.winnie.widget.glide370library.OkHttpGlideModule"
+            android:value="GlideModule"/>
+    </application>
+</manifest>

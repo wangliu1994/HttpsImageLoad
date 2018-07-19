@@ -16,6 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView imageView1;
@@ -52,27 +54,28 @@ public class MainActivity extends AppCompatActivity {
         imageView7 = findViewById(R.id.area_3);
         imageView8 = findViewById(R.id.area_4);
 
-//        ZbjImageCache.getInstance().downloadImage(imageView, url, -1);
-//        Glide.with(this).load(url).into(new SimpleTarget<Drawable>() {
-//            @Override
-//            public void onResourceReady(Drawable drawable, Transition<? super Drawable> transition) {
-//                imageView1.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{1, 0, 0, 0}));
-//                imageView2.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{0, 1, 0, 0}));
-//            }
-//        });
-//
-//        Glide.with(this).load(url1).into(new SimpleTarget<Drawable>() {
-//            @Override
-//            public void onResourceReady(Drawable drawable, Transition<? super Drawable> transition) {
-//                imageView3.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{0, 0, 1, 0}));
-//                imageView4.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{0, 0, 0, 1}));
-//            }
-//        });
+//        v4.7.1使用
+        Glide.with(this).load(url).into(new SimpleTarget<Drawable>() {
+            @Override
+            public void onResourceReady(Drawable drawable, Transition<? super Drawable> transition) {
+                imageView1.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{1, 0, 0, 0}));
+                imageView2.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{0, 1, 0, 0}));
+            }
+        });
 
-        Glide.with(this).load(url).into(imageView1);
-        Glide.with(this).load(url).into(imageView2);
-        Glide.with(this).load(url1).into(imageView3);
-        Glide.with(this).load(url1).into(imageView4);
+        Glide.with(this).load(url1).into(new SimpleTarget<Drawable>() {
+            @Override
+            public void onResourceReady(Drawable drawable, Transition<? super Drawable> transition) {
+                imageView3.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{0, 0, 1, 0}));
+                imageView4.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{0, 0, 0, 1}));
+            }
+        });
+
+//        v3.7.0使用
+//        Glide.with(this).load(url).into(imageView1);
+//        Glide.with(this).load(url).into(imageView2);
+//        Glide.with(this).load(url1).into(imageView3);
+//        Glide.with(this).load(url1).into(imageView4);
 
         Glide.with(this).load(urlImg1).into(imageView5);
         Glide.with(this).load(urlImg2).into(imageView6);

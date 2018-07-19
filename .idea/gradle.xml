@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/glide370library" />
+            <option value="$PROJECT_DIR$/glide471library" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

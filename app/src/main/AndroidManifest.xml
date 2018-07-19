@@ -18,11 +18,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!--配置glide加载https所需要的GlideModule-->
-        <meta-data
-            android:name="com.winnie.widget.httpsimageload.OkHttpGlideModule"
-            android:value="GlideModule"/>
     </application>
 
 </manifest>

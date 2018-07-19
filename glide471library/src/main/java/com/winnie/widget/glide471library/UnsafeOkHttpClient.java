@@ -1,7 +1,6 @@
-package com.winnie.widget.httpsimageload;
+package com.winnie.widget.glide471library;
 
 import java.security.cert.CertificateException;
-import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import javax.net.ssl.HostnameVerifier;
@@ -12,7 +11,6 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
 import okhttp3.OkHttpClient;
-import okhttp3.Protocol;
 
 
 /**

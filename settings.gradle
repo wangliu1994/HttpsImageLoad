@@ -1,1 +1,1 @@
-include ':app', ':glide370library'
+include ':app', ':glide370library', ':glide471library'

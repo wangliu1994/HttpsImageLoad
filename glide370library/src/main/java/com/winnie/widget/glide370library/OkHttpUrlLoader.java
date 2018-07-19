@@ -1,15 +1,16 @@
-package com.winnie.widget.httpsimageload;
+package com.winnie.widget.glide370library;
 
 import android.content.Context;
 
 import com.bumptech.glide.load.data.DataFetcher;
+import com.bumptech.glide.load.model.GenericLoaderFactory;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.load.model.ModelLoader;
 import com.bumptech.glide.load.model.ModelLoaderFactory;
+import com.squareup.okhttp.OkHttpClient;
 
 import java.io.InputStream;
 
-import okhttp3.OkHttpClient;
 
 
 /**

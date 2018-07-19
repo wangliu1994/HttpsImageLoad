@@ -30,13 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView7;
     private ImageView imageView8;
 
-    private String url = "https://rms.test.zbjdev.com/resource/redirect?key=mobile/newwap/88%E5%93%81%E7%89%8C%E8%90%A5%E9%94%80%E4%B8%93%E5%9C%BAbanner.png/origine/8f0e9d3b-70cc-4111-81fd-3ccb42b01ab5";
-    private String url1 = "https://omleweu0n.qnssl.com/mobile%2Fnewwap%2F88%E5%93%81%E7%89%8C%E8%90%A5%E9%94%80%E4%B8%93%E5%9C%BAbanner.png%2Forigine%2F8f0e9d3b-70cc-4111-81fd-3ccb42b01ab5";
-    String urlImg1 = "https://bgl.zbjimg.com/bgl%2Fbjclound%2Fpic-%E5%A4%A9%E5%A4%A9%E7%89%B9%E6%83%A0.png%2Forigine%2F4bb25bf9-bc9c-4f31-b53f-5c0ee4ef0756?imageMogr2/auto-orient/strip/quality/90";
-    String urlImg2 = "https://bgl.zbjimg.com/bgl%2Fbjclound%2Fpic-%E7%83%AD%E5%8D%96%E6%A6%9C%E5%8D%95.png%2Forigine%2Ff88f0e15-bff1-4fd1-a1ed-adb4b78cbc7d?imageMogr2/auto-orient/strip/quality/90";
-    String urlImg3 = "https://bgl.zbjimg.com/bgl%2Fbjclound%2Fpic-%E9%A1%BE%E9%97%AE%E5%92%A8%E8%AF%A2.png%2Forigine%2Fd3864440-e0b3-4ae2-8b8b-f4af217c072f?imageMogr2/auto-orient/strip/quality/90";
-    String urlImg4 = "https://bgl.zbjimg.com/bgl%2Fbjclound%2Fpic-%E9%99%84%E8%BF%91%E4%BA%BA%E6%89%8D.png%2Forigine%2Fa780f0a2-7ffe-415f-b49c-b0d70e0d9091?imageMogr2/auto-orient/strip/quality/90";
-
+    private String url = "https://travel.12306.cn/imgs/resources/uploadfiles/images/a9b9c76d-36ba-4e4a-8e02-9e6a1a991da0_news_W540_H300.jpg";
 
     @TargetApi(Build.VERSION_CODES.O)
     @Override
@@ -60,27 +54,22 @@ public class MainActivity extends AppCompatActivity {
             public void onResourceReady(Drawable drawable, Transition<? super Drawable> transition) {
                 imageView1.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{1, 0, 0, 0}));
                 imageView2.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{0, 1, 0, 0}));
-            }
-        });
-
-        Glide.with(this).load(url1).into(new SimpleTarget<Drawable>() {
-            @Override
-            public void onResourceReady(Drawable drawable, Transition<? super Drawable> transition) {
                 imageView3.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{0, 0, 1, 0}));
                 imageView4.setImageBitmap(toRoundCorner(((BitmapDrawable) drawable).getBitmap(), 40, new int[]{0, 0, 0, 1}));
             }
         });
 
+
 //        v3.7.0使用
 //        Glide.with(this).load(url).into(imageView1);
 //        Glide.with(this).load(url).into(imageView2);
-//        Glide.with(this).load(url1).into(imageView3);
-//        Glide.with(this).load(url1).into(imageView4);
+//        Glide.with(this).load(url).into(imageView3);
+//        Glide.with(this).load(url).into(imageView4);
 
-        Glide.with(this).load(urlImg1).into(imageView5);
-        Glide.with(this).load(urlImg2).into(imageView6);
-        Glide.with(this).load(urlImg3).into(imageView7);
-        Glide.with(this).load(urlImg4).into(imageView8);
+        Glide.with(this).load(url).into(imageView5);
+        Glide.with(this).load(url).into(imageView6);
+        Glide.with(this).load(url).into(imageView7);
+        Glide.with(this).load(url).into(imageView8);
     }
 
     /**

@@ -1,5 +1,6 @@
 package com.winnie.widget.glide471library;
 
+import java.security.SecureRandom;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.concurrent.TimeUnit;
@@ -41,11 +42,10 @@ public class UnsafeOkHttpClient {
 
             // Install the all-trusting trust manager
             final SSLContext sslContext = SSLContext.getInstance("SSL");
-            sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
+            sslContext.init(null, trustAllCerts, new SecureRandom());
 
             // Create an ssl socket factory with our all-trusting manager
             final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
-
             OkHttpClient.Builder builder = new OkHttpClient.Builder();
             builder.sslSocketFactory(sslSocketFactory, (X509TrustManager) trustAllCerts[0]);
             builder.hostnameVerifier(new HostnameVerifier() {
@@ -54,10 +54,6 @@ public class UnsafeOkHttpClient {
                     return true;
                 }
             });
-
-            builder.connectTimeout(20, TimeUnit.SECONDS);
-            builder.readTimeout(20,TimeUnit.SECONDS);
-
             OkHttpClient okHttpClient = builder.build();
             return okHttpClient;
         } catch (Exception e) {

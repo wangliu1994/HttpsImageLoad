@@ -24,7 +24,8 @@ import okhttp3.OkHttpClient;
 public class OkHttpGlideModule extends AppGlideModule {
 
     @Override
-    public void registerComponents(@NonNull Context context, @NonNull Glide glide, @NonNull Registry registry) {
+    public void registerComponents(@NonNull Context context,
+                                   @NonNull Glide glide, @NonNull Registry registry) {
         OkHttpClient client = UnsafeOkHttpClient.getUnsafeOkHttpClient();
         registry.replace(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(client));
     }

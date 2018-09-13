@@ -23,7 +23,7 @@ public class OkHttpGlideModule implements GlideModule {
 
     @Override
     public void registerComponents(Context context, Glide glide) {
-        OkHttpClient client = new UnsafeOkHttpClient().getUnsafeOkHttpClient();
+        OkHttpClient client = UnsafeOkHttpClient.getUnsafeOkHttpClient();
         glide.register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(client));
     }
 }
